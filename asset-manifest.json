@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/pricing-component-with-toggle/static/css/main.23fc2a54.chunk.css",
-    "main.js": "/pricing-component-with-toggle/static/js/main.c4d6a997.chunk.js",
-    "main.js.map": "/pricing-component-with-toggle/static/js/main.c4d6a997.chunk.js.map",
+    "main.css": "/pricing-component-with-toggle/static/css/main.aec09e55.chunk.css",
+    "main.js": "/pricing-component-with-toggle/static/js/main.ef59960d.chunk.js",
+    "main.js.map": "/pricing-component-with-toggle/static/js/main.ef59960d.chunk.js.map",
     "runtime-main.js": "/pricing-component-with-toggle/static/js/runtime-main.1b3b2cce.js",
     "runtime-main.js.map": "/pricing-component-with-toggle/static/js/runtime-main.1b3b2cce.js.map",
-    "static/js/2.c881e574.chunk.js": "/pricing-component-with-toggle/static/js/2.c881e574.chunk.js",
-    "static/js/2.c881e574.chunk.js.map": "/pricing-component-with-toggle/static/js/2.c881e574.chunk.js.map",
+    "static/js/2.a6aa2bb3.chunk.js": "/pricing-component-with-toggle/static/js/2.a6aa2bb3.chunk.js",
+    "static/js/2.a6aa2bb3.chunk.js.map": "/pricing-component-with-toggle/static/js/2.a6aa2bb3.chunk.js.map",
     "static/js/3.9fc9580c.chunk.js": "/pricing-component-with-toggle/static/js/3.9fc9580c.chunk.js",
     "static/js/3.9fc9580c.chunk.js.map": "/pricing-component-with-toggle/static/js/3.9fc9580c.chunk.js.map",
     "index.html": "/pricing-component-with-toggle/index.html",
-    "static/css/main.23fc2a54.chunk.css.map": "/pricing-component-with-toggle/static/css/main.23fc2a54.chunk.css.map",
-    "static/js/2.c881e574.chunk.js.LICENSE.txt": "/pricing-component-with-toggle/static/js/2.c881e574.chunk.js.LICENSE.txt",
+    "static/css/main.aec09e55.chunk.css.map": "/pricing-component-with-toggle/static/css/main.aec09e55.chunk.css.map",
+    "static/js/2.a6aa2bb3.chunk.js.LICENSE.txt": "/pricing-component-with-toggle/static/js/2.a6aa2bb3.chunk.js.LICENSE.txt",
     "static/media/App.css": "/pricing-component-with-toggle/static/media/bg-top.4980c1fd.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1b3b2cce.js",
-    "static/js/2.c881e574.chunk.js",
-    "static/css/main.23fc2a54.chunk.css",
-    "static/js/main.c4d6a997.chunk.js"
+    "static/js/2.a6aa2bb3.chunk.js",
+    "static/css/main.aec09e55.chunk.css",
+    "static/js/main.ef59960d.chunk.js"
   ]
 }
