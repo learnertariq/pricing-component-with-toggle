@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* typography */
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--color-light);
+  background-image: url("./assets/bg-bottom.svg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+body::before {
+  content: "";
+  background-image: url("./assets/bg-top.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transform: translateX(20rem);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 768px) {
+  body::before {
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+:root {
+  --gradient-primary: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --color-primary: hsl(232, 13%, 33%);
+  --color-secondary: hsl(233, 13%, 49%);
+  --color-accent: hsl(234, 14%, 74%);
+  --color-light: hsl(240, 78%, 98%);
+  --color-white: #fff;
+}
+
+/* Global */
+.clickable {
+  cursor: pointer;
+}
+
+/* Toggler Component */
+.toggler-container {
+  --height: 3rem;
+  background-image: var(--gradient-primary);
+  border-radius: 2rem;
+  height: var(--height);
+  width: 7rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.toggler {
+  height: calc(var(--height) - 0.7rem);
+  width: calc(var(--height) - 0.7rem);
+  border-radius: 50%;
+  background-color: var(--color-light);
+}
+
+.toggler-position--left {
+  justify-content: flex-start;
+}
+
+.toggler-position--right {
+  justify-content: flex-end;
+}
+
+/* Pricing Header */
+.pricing-header {
+  text-align: center;
+  margin: 7rem 0;
+}
+
+.pricing-heading {
+  color: var(--color-primary);
+}
+
+.pricing-toggler-group {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggler-cycle {
+  color: var(--color-secondary);
+  margin: 0 2rem;
+}
+
+/* Card */
+.card {
+  background-color: var(--color-white);
+  max-width: 400px;
+  border-radius: 1rem;
+  text-align: center;
+  color: var(--color-primary);
+  padding: 5rem 3rem;
+  margin: 4rem 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.15);
+}
+
+.card--primary {
+  background-image: var(--gradient-primary);
+  color: var(--color-light);
+  transform: scale(1.05);
+}
+
+.card__title {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 2rem 0 1rem;
+  opacity: 0.8;
+}
+
+.card__subtitle {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  border-bottom: 1px solid var(--color-accent);
+  padding: 2rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.list-item:first-child {
+  border-top: 1px solid var(--color-accent);
+}
+
+/* button component */
+.btn {
+  border: 1px solid transparent;
+  padding: 1.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  outline: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.btn--primary {
+  background-image: var(--gradient-primary);
+  color: var(--color-light);
+}
+
+.btn--primary:hover {
+  border: 1px solid var(--color-primary);
+  background-image: none;
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+.btn--secondary {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-light);
+  color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background-image: var(--gradient-primary);
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+}
+
+/* Pricing Body */
+.pricing-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-body .card {
+  flex: 1 1 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .pricing-body {
+    flex-wrap: nowrap;
   }
 }
