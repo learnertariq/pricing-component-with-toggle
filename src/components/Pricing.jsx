@@ -35,6 +35,13 @@ const pricings = [
 function Pricing(props) {
   const [isMonthly, setIsMonthly] = useState(true);
 
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") return setIsMonthly(false);
+      if (e.key === "ArrowRight") return setIsMonthly(true);
+    });
+  }, []);
+
   function handleToggle() {
     setIsMonthly(!isMonthly);
   }
@@ -42,7 +49,7 @@ function Pricing(props) {
   return (
     <>
       <PricingHeader isMonthly={isMonthly} onToggleCycle={handleToggle} />
-      <PricingBody isMonthly={isMonthly} pricings={pricings}  />
+      <PricingBody isMonthly={isMonthly} pricings={pricings} />
     </>
   );
 }

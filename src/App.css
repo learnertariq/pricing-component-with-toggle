@@ -71,6 +71,7 @@ body::before {
   display: inline-flex;
   align-items: center;
   padding: 0 0.5rem;
+  position: relative;
 }
 
 .toggler {
@@ -214,4 +215,24 @@ body::before {
   .pricing-body {
     flex-wrap: nowrap;
   }
+}
+
+/* ToolTip */
+.tool-tip {
+  position: absolute;
+  top: -35px;
+  background-color: var(--color-white);
+  text-align: center;
+  box-shadow: 5px 5px 10px var(--color-secondary);
+  border-radius: 0.5rem;
+  padding: 0.2rem 2rem;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.2s ease;
+  width: 300px;
+  display: inline-block;
+}
+.toggler-container:hover .tool-tip {
+  max-height: 100%;
+  opacity: 0.8;
 }
