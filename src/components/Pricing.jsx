@@ -52,10 +52,10 @@ function Pricing(props) {
   }
 
   return (
-    <>
+    <div className="pricing">
       <PricingHeader isMonthly={isMonthly} onToggleCycle={handleToggle} />
       <PricingBody isMonthly={isMonthly} pricings={pricings} />
-    </>
+    </div>
   );
 }
 

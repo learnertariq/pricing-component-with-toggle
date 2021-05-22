@@ -16,31 +16,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   background-color: var(--color-light);
-  background-image: url("./assets/bg-bottom.svg");
-  background-position: bottom left;
-  background-repeat: no-repeat;
+  background-image: url("./assets/bg-top.svg"), url("./assets/bg-bottom.svg");
+  background-position: top right, bottom left;
+  background-repeat: no-repeat,  no-repeat;
   min-height: 100vh;
-  position: relative;
-}
-
-body::before {
-  content: "";
-  background-image: url("./assets/bg-top.svg");
-  background-position: top right;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 100%;
   width: 100%;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  transform: translateX(20rem);
-}
-
-@media screen and (min-width: 768px) {
-  body::before {
-    transform: translateX(0);
-  }
+  position: relative;
 }
 
 :root {
@@ -236,3 +217,4 @@ body::before {
   max-height: 100%;
   opacity: 0.8;
 }
+
