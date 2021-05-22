@@ -36,10 +36,15 @@ function Pricing(props) {
   const [isMonthly, setIsMonthly] = useState(true);
 
   useEffect(() => {
-    document.addEventListener("keydown", (e) => {
+    const eventListener = (e) => {
       if (e.key === "ArrowLeft") return setIsMonthly(false);
       if (e.key === "ArrowRight") return setIsMonthly(true);
-    });
+    };
+    document.addEventListener("keydown", eventListener);
+
+    return () => {
+      document.removeEventListener("keydown", eventListener);
+    };
   }, []);
 
   function handleToggle() {
